@@ -1,0 +1,130 @@
+----------------------------------------------------------------------------------------------------
+<|im_start|>system
+你是一个优秀的聊天机器人，总是给我正确的回应！<|im_end|>
+<|im_start|>user
+你来自哪里？<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+我来自月球<|im_end|>
+<|im_start|>user
+你到底来自哪里？<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+我来自地球<|im_end|>
+
+----------------------------------------------------------------------------------------------------
+tokenizer词表长度： 6400
+encoder长度： 78
+decoder一致性： True 
+
+----------------------------------------------------------------------------------------------------
+压缩率测试（Chars/Tokens）：
+样本 1 | 字符数:  206 | Tokens: 123 | 压缩率: 1.67
+样本 2 | 字符数:  185 | Tokens: 150 | 压缩率: 1.23
+样本 3 | 字符数:  573 | Tokens: 142 | 压缩率: 4.04
+样本 4 | 字符数:  533 | Tokens: 148 | 压缩率: 3.60
+样本 5 | 字符数:  269 | Tokens:  98 | 压缩率: 2.74
+平均压缩率: 2.66
+----------------------------------------------------------------------------------------------------
+流式解码（字节缓冲）测试：
+Token ID: 1               -> Raw: ['<|im_start|>']     -> Decode Str: <|im_start|>
+Token ID: 118             -> Raw: ['s']                -> Decode Str: s
+Token ID: 4849            -> Raw: ['ystem']            -> Decode Str: ystem
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 441             -> Raw: ['ä½ł']              -> Decode Str: 你
+Token ID: 1001            -> Raw: ['æĺ¯ä¸Ģä¸ª']        -> Decode Str: 是一个
+Token ID: 985             -> Raw: ['ä¼ĺ']              -> Decode Str: 优
+Token ID: 5436            -> Raw: ['ç§Ģ']              -> Decode Str: 秀
+Token ID: 296             -> Raw: ['çļĦ']              -> Decode Str: 的
+Token ID: 5358            -> Raw: ['èģĬ']              -> Decode Str: 聊
+Token ID: 993             -> Raw: ['å¤©']              -> Decode Str: 天
+Token ID: 3697            -> Raw: ['æľºåĻ¨äºº']        -> Decode Str: 机器人
+Token ID: 294             -> Raw: ['ï¼Į']              -> Decode Str: ，
+Token ID: 6056            -> Raw: ['æĢ»æĺ¯']           -> Decode Str: 总是
+Token ID: 3530            -> Raw: ['ç»ĻæĪĳ']           -> Decode Str: 给我
+Token ID: 5154            -> Raw: ['æŃ£ç¡®çļĦ']        -> Decode Str: 正确的
+Token ID: 1055            -> Raw: ['åĽŀ']              -> Decode Str: 回
+Token ID: 545             -> Raw: ['åºĶ']              -> Decode Str: 应
+Token ID: 1364            -> Raw: ['ï¼ģ']              -> Decode Str: ！
+Token ID: 2               -> Raw: ['<|im_end|>']       -> Decode Str: <|im_end|>
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 1               -> Raw: ['<|im_start|>']     -> Decode Str: <|im_start|>
+Token ID: 832             -> Raw: ['us']               -> Decode Str: us
+Token ID: 311             -> Raw: ['er']               -> Decode Str: er
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 441             -> Raw: ['ä½ł']              -> Decode Str: 你
+Token ID: 4666            -> Raw: ['æĿ¥èĩª']           -> Decode Str: 来自
+Token ID: 1742            -> Raw: ['åĵª']              -> Decode Str: 哪
+Token ID: 852             -> Raw: ['éĩĮ']              -> Decode Str: 里
+Token ID: 776             -> Raw: ['ï¼Ł']              -> Decode Str: ？
+Token ID: 2               -> Raw: ['<|im_end|>']       -> Decode Str: <|im_end|>
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 1               -> Raw: ['<|im_start|>']     -> Decode Str: <|im_start|>
+Token ID: 1388            -> Raw: ['ass']              -> Decode Str: ass
+Token ID: 570             -> Raw: ['ist']              -> Decode Str: ist
+Token ID: 811             -> Raw: ['ant']              -> Decode Str: ant
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 25              -> Raw: ['<think>']          -> Decode Str: <think>
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 26              -> Raw: ['</think>']         -> Decode Str: </think>
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 463             -> Raw: ['æĪĳ']              -> Decode Str: 我
+Token ID: 4666            -> Raw: ['æĿ¥èĩª']           -> Decode Str: 来自
+Token ID: 1728            -> Raw: ['æľĪ']              -> Decode Str: 月
+Token ID: 1143            -> Raw: ['çĲĥ']              -> Decode Str: 球
+Token ID: 2               -> Raw: ['<|im_end|>']       -> Decode Str: <|im_end|>
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 1               -> Raw: ['<|im_start|>']     -> Decode Str: <|im_start|>
+Token ID: 832             -> Raw: ['us']               -> Decode Str: us
+Token ID: 311             -> Raw: ['er']               -> Decode Str: er
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 441             -> Raw: ['ä½ł']              -> Decode Str: 你
+Token ID: 512             -> Raw: ['åĪ°']              -> Decode Str: 到
+Token ID: 3340            -> Raw: ['åºķ']              -> Decode Str: 底
+Token ID: 4666            -> Raw: ['æĿ¥èĩª']           -> Decode Str: 来自
+Token ID: 1742            -> Raw: ['åĵª']              -> Decode Str: 哪
+Token ID: 852             -> Raw: ['éĩĮ']              -> Decode Str: 里
+Token ID: 776             -> Raw: ['ï¼Ł']              -> Decode Str: ？
+Token ID: 2               -> Raw: ['<|im_end|>']       -> Decode Str: <|im_end|>
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 1               -> Raw: ['<|im_start|>']     -> Decode Str: <|im_start|>
+Token ID: 1388            -> Raw: ['ass']              -> Decode Str: ass
+Token ID: 570             -> Raw: ['ist']              -> Decode Str: ist
+Token ID: 811             -> Raw: ['ant']              -> Decode Str: ant
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 25              -> Raw: ['<think>']          -> Decode Str: <think>
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 26              -> Raw: ['</think>']         -> Decode Str: </think>
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
+
+Token ID: 463             -> Raw: ['æĪĳ']              -> Decode Str: 我
+Token ID: 4666            -> Raw: ['æĿ¥èĩª']           -> Decode Str: 来自
+Token ID: 2999            -> Raw: ['åľ°çĲĥ']           -> Decode Str: 地球
+Token ID: 2               -> Raw: ['<|im_end|>']       -> Decode Str: <|im_end|>
+Token ID: 234             -> Raw: ['Ċ']                -> Decode Str: 
