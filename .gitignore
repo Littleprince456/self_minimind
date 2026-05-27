@@ -4,3 +4,5 @@ __pycache__/
 out
 website/
 docs-minimind/
+dataset/pretrain_t2t_mini.jsonl
+dataset/sft_t2t_mini.jsonl
