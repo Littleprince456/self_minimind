@@ -2,7 +2,7 @@
 # Note: It is not recommended to re-train the tokenizer. MiniMind already includes one. This script is for learning and reference only. Training models with different tokenizers will lead to inconsistent outputs and reduce model reusability in the community.
 import os
 import json
-from tokenizers import decoders, models, pre_tokenizers, trainers, Tokenizer
+# from tokenizers import decoders, models, pre_tokenizers, trainers, Tokenizer
 
 DATA_PATH = '../dataset/sft_t2t_mini.jsonl'
 TOKENIZER_DIR = '../model_learn_tokenizer/'
@@ -164,5 +164,5 @@ def eval_tokenizer(tokenizer_dir):
             token_cache = []
 
 if __name__ == '__main__':
-    train_tokenizer(DATA_PATH, TOKENIZER_DIR, VOCAB_SIZE)
-    eval_tokenizer(TOKENIZER_DIR)
+    # train_tokenizer(DATA_PATH, TOKENIZER_DIR, VOCAB_SIZE)
+    eval_tokenizer('./model')
