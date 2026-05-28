@@ -39,7 +39,13 @@ class PretrainDataset(Dataset):
         super().__init__()
         self.tokenizer = tokenizer
         self.max_length = max_length
-        self.samples = load_dataset('json', data_files=data_path, split='train')
+        self.samples = []
+        with open(data_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                try:
+                    self.samples.append(json.loads(line.strip()))
+                except json.JSONDecodeError:
+                    continue # 忽略格式损坏的行
 
     def __len__(self):
         return len(self.samples)
