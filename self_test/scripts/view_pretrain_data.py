@@ -2,7 +2,7 @@ import sys
 import os
 
 # 将根目录加入路径以便导入模块
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 from transformers import AutoTokenizer
 from torch.utils.data import DataLoader
@@ -10,8 +10,8 @@ from dataset.lm_dataset import PretrainDataset
 
 def main():
     # 配置路径
-    data_path = "../dataset/pretrain_t2t_mini.jsonl"
-    tokenizer_path = "../model" # 假设模型（含tokenizer配置）在这个路径下
+    data_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../dataset/pretrain_t2t_mini.jsonl'))
+    tokenizer_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../model'))
     
     # 初始化 tokenizer 和 dataset
     print("正在加载 Tokenizer 和 Dataset...")
