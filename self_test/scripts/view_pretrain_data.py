@@ -15,7 +15,8 @@ class SafePretrainDataset(PretrainDataset):
         self.samples = []
         
         # 逐行读取并捕获 JSON 解析错误，绕过 pyarrow 的严格检查
-        with open(data_path, 'r', encoding='utf-8') as f:
+        # 使用 errors='ignore' 忽略 UTF-8 解码错误
+        with open(data_path, 'r', encoding='utf-8', errors='ignore') as f:
             for line_num, line in enumerate(f, 1):
                 try:
                     import json
