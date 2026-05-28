@@ -40,10 +40,13 @@ class PretrainDataset(Dataset):
         self.tokenizer = tokenizer
         self.max_length = max_length
         self.samples = []
-        with open(data_path, 'r', encoding='utf-8') as f:
+        with open(data_path, 'r', encoding='utf-8', errors='ignore') as f:
             for line in f:
+                line = line.strip()
+                if not line:
+                    continue
                 try:
-                    self.samples.append(json.loads(line.strip()))
+                    self.samples.append(json.loads(line))
                 except json.JSONDecodeError:
                     continue # 忽略格式损坏的行
 
