@@ -36,7 +36,7 @@ MAX_SEQ_LEN=340                         # 最大序列长度
 USE_MOE=1                               # 是否使用 MoE 架构（0=否，1=是）
 
 # 5. 数据与续训
-DATA_PATH="./dataset/pretrain_t2t_mini.jsonl"  # 预训练数据路径
+DATA_PATH="../dataset/pretrain_t2t_mini.jsonl"  # 预训练数据路径
 FROM_WEIGHT="none"                      # 基于哪个权重训练 (none 表示从头开始)
 FROM_RESUME=0                           # 是否自动检测并续训（0=否，1=是）
 
@@ -61,8 +61,8 @@ echo "🚀 开始执行预训练脚本..."
 echo "📂 当前工作目录: $(pwd)"
 echo "📝 训练日志将输出到: $LOG_FILE"
 
-# 使用 stdbuf 取消缓冲，并通过 tee 将输出同时显示在终端并写入文件
-stdbuf -oL -eL python3 train_pretrain.py \
+# 通过 tee 将输出同时显示在终端并写入文件 (由于 macos 默认没有 stdbuf，故去除)
+python3 train_pretrain.py \
     --save_dir "$SAVE_DIR" \
     --save_weight "$SAVE_WEIGHT" \
     --save_interval $SAVE_INTERVAL \
