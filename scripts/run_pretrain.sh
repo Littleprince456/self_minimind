@@ -4,8 +4,8 @@
 # MiniMind 预训练启动脚本
 # ==============================================================================
 
-# 设置工作目录为脚本所在目录的上一级（即项目根目录）
-cd "$(dirname "$0")/.." || exit
+# 设置工作目录为 trainer 目录，这样脚本里的相对路径（如 ../model）就能正确解析了
+cd "$(dirname "$0")/../trainer" || exit
 
 # ------------------------------------------------------------------------------
 # 可配置参数区
@@ -52,7 +52,7 @@ WANDB_PROJECT="MiniMind-Pretrain"       # wandb 项目名称
 echo "🚀 开始执行预训练脚本..."
 echo "📂 当前工作目录: $(pwd)"
 
-python3 trainer/train_pretrain.py \
+python3 train_pretrain.py \
     --save_dir "$SAVE_DIR" \
     --save_weight "$SAVE_WEIGHT" \
     --save_interval $SAVE_INTERVAL \
