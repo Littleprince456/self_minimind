@@ -8,6 +8,22 @@ from transformers import AutoTokenizer
 from torch.utils.data import DataLoader
 from dataset.lm_dataset import PretrainDataset
 
+class SafePretrainDataset(PretrainDataset):
+    def __init__(self, data_path, tokenizer, max_length=512):
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+        self.samples = []
+        
+        # 逐行读取并捕获 JSON 解析错误，绕过 pyarrow 的严格检查
+        with open(data_path, 'r', encoding='utf-8') as f:
+            for line_num, line in enumerate(f, 1):
+                try:
+                    import json
+                    self.samples.append(json.loads(line))
+                except Exception as e:
+                    print(f"警告：忽略第 {line_num} 行的损坏数据 - {e}")
+                    continue
+
 def main():
     # 配置路径
     data_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../dataset/pretrain_t2t_mini.jsonl'))
@@ -22,7 +38,8 @@ def main():
         return
 
     # 初始化 Dataset，设置较小的 max_length 方便观察
-    dataset = PretrainDataset(data_path, tokenizer, max_length=128)
+    # 使用自定义的 SafePretrainDataset 来兼容损坏的 JSONL 行
+    dataset = SafePretrainDataset(data_path, tokenizer, max_length=128)
     
     # 模拟训练时的 DataLoader，设置 batch_size 为 32
     dataloader = DataLoader(dataset, batch_size=32, shuffle=False)
