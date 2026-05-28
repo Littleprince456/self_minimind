@@ -49,10 +49,20 @@ WANDB_PROJECT="MiniMind-Pretrain"       # wandb 项目名称
 # 执行训练命令
 # ------------------------------------------------------------------------------
 
+# 获取当前时间，格式为 YYYYMMDD_HHMMSS
+CURRENT_TIME=$(date "+%Y%m%d_%H%M%S")
+LOG_DIR="../self_test/outputs"
+LOG_FILE="${LOG_DIR}/pretrain_${CURRENT_TIME}.log"
+
+# 确保日志目录存在
+mkdir -p "$LOG_DIR"
+
 echo "🚀 开始执行预训练脚本..."
 echo "📂 当前工作目录: $(pwd)"
+echo "📝 训练日志将输出到: $LOG_FILE"
 
-python3 train_pretrain.py \
+# 使用 stdbuf 取消缓冲，并通过 tee 将输出同时显示在终端并写入文件
+stdbuf -oL -eL python3 train_pretrain.py \
     --save_dir "$SAVE_DIR" \
     --save_weight "$SAVE_WEIGHT" \
     --save_interval $SAVE_INTERVAL \
@@ -74,4 +84,4 @@ python3 train_pretrain.py \
     --from_resume $FROM_RESUME \
     --log_interval $LOG_INTERVAL \
     --wandb_project "$WANDB_PROJECT" \
-    $USE_WANDB
+    $USE_WANDB 2>&1 | tee "$LOG_FILE"
