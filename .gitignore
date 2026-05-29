@@ -4,5 +4,15 @@ __pycache__/
 out
 website/
 docs-minimind/
+# Models & Checkpoints
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+out/
+checkpoints/
+
+# dataset
 dataset/pretrain_t2t_mini.jsonl
 dataset/sft_t2t_mini.jsonl
