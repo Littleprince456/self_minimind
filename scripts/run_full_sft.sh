@@ -11,7 +11,7 @@ cd "$PROJECT_ROOT"
 NPROC_PER_NODE=1
 
 # ========== 全量微调训练参数 ==========
-SAVE_DIR="./out"                       # 模型保存目录 (由于 cd 到了 trainer，直接使用 ./out 即可匹配原有的相对逻辑)
+SAVE_DIR="../trainer/out"              # 模型保存目录 (通过 ../trainer/out 指定为绝对相对路径)
 SAVE_WEIGHT="full_sft"                 # 保存权重的前缀名
 EPOCHS=2                               # 训练轮数
 BATCH_SIZE=16                          # batch size
@@ -53,8 +53,6 @@ echo "📝 训练日志将输出到: $LOG_FILE"
 echo "========================================="
 
 # 切换到 trainer 目录执行，以兼容代码中写死的相对路径 (如 ../model 等)
-# 注意：trainer_utils.py 中在尝试加载预训练权重时，直接使用: weight_path = f'{save_dir}/{from_weight}_{lm_config.hidden_size}{moe_suffix}.pth'
-# 因此我们需要确保这里的 SAVE_DIR 指向存放了预训练模型的实际目录
 cd "$PROJECT_ROOT/trainer"
 
 # 启动训练
