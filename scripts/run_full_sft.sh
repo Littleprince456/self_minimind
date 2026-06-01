@@ -39,8 +39,17 @@ WANDB_PROJECT="MiniMind-Full-SFT"      # wandb项目名
 USE_COMPILE=0                          # 是否使用torch.compile加速（0=否，1=是）
 
 
+# 获取当前时间，格式为 YYYYMMDD_HHMMSS
+CURRENT_TIME=$(date "+%Y%m%d_%H%M%S")
+LOG_DIR="../self_test/outputs"
+LOG_FILE="${LOG_DIR}/full_sft_${CURRENT_TIME}.log"
+
+# 确保日志目录存在
+mkdir -p "$LOG_DIR"
+
 echo "🚀 开始启动全量微调 (Full SFT) 训练..."
 echo "📂 切换到工作目录: $PROJECT_ROOT/trainer"
+echo "📝 训练日志将输出到: $LOG_FILE"
 echo "========================================="
 
 # 切换到 trainer 目录执行，以兼容代码中写死的相对路径 (如 ../model, ../out 等)
@@ -69,4 +78,4 @@ torchrun --nproc_per_node=$NPROC_PER_NODE train_full_sft.py \
     --from_resume $FROM_RESUME \
     $USE_WANDB \
     --wandb_project $WANDB_PROJECT \
-    --use_compile $USE_COMPILE
+    --use_compile $USE_COMPILE 2>&1 | tee "$LOG_FILE"
