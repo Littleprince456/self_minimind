@@ -11,7 +11,7 @@ cd "$PROJECT_ROOT"
 NPROC_PER_NODE=1
 
 # ========== 全量微调训练参数 ==========
-SAVE_DIR="../trainer/out"              # 模型保存目录 (通过 ../trainer/out 指定为绝对相对路径)
+SAVE_DIR="./out"              # 模型保存目录
 SAVE_WEIGHT="full_sft"                 # 保存权重的前缀名
 EPOCHS=2                               # 训练轮数
 BATCH_SIZE=16                          # batch size
