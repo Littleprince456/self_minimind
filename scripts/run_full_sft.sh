@@ -30,7 +30,7 @@ NUM_HIDDEN_LAYERS=8                    # 隐藏层数量
 MAX_SEQ_LEN=768                        # 训练的最大截断长度
 USE_MOE=1                              # 是否使用MoE架构（0=否，1=是）
 DATA_PATH="../dataset/sft_t2t_mini.jsonl"  # 训练数据路径
-FROM_WEIGHT="pretrain"                 # 基于哪个权重训练，为none则不基于任何权重训练
+FROM_WEIGHT="pretrain"                 # 基于哪个权重训练 (不需要带 _768_moe.pth 后缀，脚本会自动拼接)
 FROM_RESUME=0                          # 是否自动检测&续训（0=否，1=是）
 
 # ========== Wandb 与优化 ==========
