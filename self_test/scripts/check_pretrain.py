@@ -6,8 +6,7 @@ import torch
 from transformers import AutoTokenizer
 
 # 将项目根目录加入 sys.path，以便导入 model 等模块
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(PROJECT_ROOT)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from model.model_minimind import MiniMindConfig, MiniMindForCausalLM
 from trainer.trainer_utils import setup_seed, get_model_params
