@@ -40,11 +40,14 @@ USE_COMPILE=0                          # 是否使用torch.compile加速（0=否
 
 
 echo "🚀 开始启动全量微调 (Full SFT) 训练..."
-echo "📂 根目录: $PROJECT_ROOT"
+echo "📂 切换到工作目录: $PROJECT_ROOT/trainer"
 echo "========================================="
 
+# 切换到 trainer 目录执行，以兼容代码中写死的相对路径 (如 ../model, ../out 等)
+cd "$PROJECT_ROOT/trainer"
+
 # 启动训练
-torchrun --nproc_per_node=$NPROC_PER_NODE trainer/train_full_sft.py \
+torchrun --nproc_per_node=$NPROC_PER_NODE train_full_sft.py \
     --save_dir $SAVE_DIR \
     --save_weight $SAVE_WEIGHT \
     --epochs $EPOCHS \
