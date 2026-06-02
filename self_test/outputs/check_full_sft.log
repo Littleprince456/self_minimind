@@ -600,3 +600,18 @@ Raw Input: <|im_start|>user
 Input IDs: [1, 832, 311, 234, 3007, 418, 4634, 61, 5351, 938, 851, 1728, 1221, 294, 4755, 357, 553, 562, 506, 286, 2, 234, 1, 1388, 570, 811, 234, 25, 234, 234, 26, 234, 234]
 Tokens: ['<|im_start|>', 'us', 'er', '\n', '翻译', '为', '英语', ':', '床', '前', '明', '月', '光', '，', '疑', '是', '地', '上', '�', '�', '<|im_end|>', '\n', '<|im_start|>', 'ass', 'ist', 'ant', '\n', '<think>', '\n', '\n', '</think>', '\n', '\n']
 -------------------------
+🧠 Generated (Raw): <|im_start|>user
+翻译为英语:床前明月光，疑是地上霜<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+The photograph of the windows stream is a meta-level score that depends on the standard frame. The light of the windows stream is slightly dynamically. Without more specific data or current events, it's hard to provide an accurate translation. This makes it easy to useful in the interfaces and offering time with the timestamp. As of my last update, the system was startning back on, and the light fully move up on the brushi window. After the windows, the device starts at least 300 meters.<|im_end|>
+
+--- Output Details ---
+Generated Output IDs: [750, 2001, 593, 1172, 3043, 354, 309, 339, 4310, 580, 3419, 395, 299, 4743, 100, 48, 361, 1415, 1416, 1239, 591, 2486, 5925, 619, 309, 4699, 341, 5259, 49, 794, 2795, 354, 309, 339, 4310, 580, 3419, 395, 316, 2944, 542, 373, 3738, 497, 2579, 49, 1004, 568, 955, 1036, 1197, 1553, 522, 1819, 1713, 1870, 47, 563, 628, 429, 1433, 364, 1017, 346, 3168, 5878, 49, 1264, 1034, 5596, 563, 4466, 124, 364, 1418, 1930, 353, 309, 1993, 105, 4985, 376, 1690, 3906, 1953, 599, 309, 297, 467, 611, 5821, 49, 3962, 354, 1366, 2276, 3012, 47, 309, 2841, 1111, 2347, 1795, 3901, 619, 47, 376, 309, 2795, 341, 549, 542, 621, 478, 1253, 619, 309, 3461, 4923, 108, 5472, 451, 49, 529, 3078, 309, 339, 4310, 47, 309, 5130, 1126, 2347, 118, 1248, 848, 1154, 707, 670, 4997, 49, 2]
+Generated Tokens: ['The', ' ph', 'ot', 'og', 'raph', ' of', ' the', ' w', 'indows', ' st', 'ream', ' is', ' a', ' met', 'a', '-', 'le', 'vel', ' sc', 'ore', ' that', ' dep', 'ends', ' on', ' the', ' standard', ' f', 'rame', '.', ' The', ' light', ' of', ' the', ' w', 'indows', ' st', 'ream', ' is', ' s', 'light', 'ly', ' d', 'yn', 'am', 'ically', '.', ' W', 'ith', 'out', ' more', ' specific', ' data', ' or', ' current', ' ev', 'ents', ',', ' it', "'s", ' h', 'ard', ' to', ' provide', ' an', ' accurate', ' translation', '.', ' This', ' ma', 'kes', ' it', ' eas', 'y', ' to', ' use', 'ful', ' in', ' the', ' inter', 'f', 'aces', ' and', ' off', 'ering', ' time', ' with', ' the', ' t', 'im', 'est', 'amp', '.', ' As', ' of', ' my', ' last', ' update', ',', ' the', ' system', ' was', ' start', 'ning', ' back', ' on', ',', ' and', ' the', ' light', ' f', 'ul', 'ly', ' mo', 've', ' up', ' on', ' the', ' br', 'ush', 'i', ' wind', 'ow', '.', ' A', 'fter', ' the', ' w', 'indows', ',', ' the', ' dev', 'ice', ' start', 's', ' at', ' le', 'ast', ' 3', '00', ' meters', '.', '<|im_end|>']
+----------------------
+[Speed]: 92.22 tokens/s
+
