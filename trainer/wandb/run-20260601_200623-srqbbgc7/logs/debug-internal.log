@@ -1,0 +1,19 @@
+{"time":"2026-06-01T20:06:23.810645171+08:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2026-06-01T20:06:23.810661089+08:00","level":"INFO","msg":"created symlink","path":"/workspace/self_minimind/trainer/wandb/run-20260601_200623-srqbbgc7/logs/debug-core.log"}
+{"time":"2026-06-01T20:06:23.811001896+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2026-06-01T20:06:23.818057668+08:00","level":"INFO","msg":"created new stream","id":"srqbbgc7"}
+{"time":"2026-06-01T20:06:23.81809669+08:00","level":"INFO","msg":"stream: started","id":"srqbbgc7"}
+{"time":"2026-06-01T20:06:23.818105892+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"srqbbgc7"}}
+{"time":"2026-06-01T20:06:23.818121501+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"srqbbgc7"}}
+{"time":"2026-06-01T20:06:23.818112987+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"srqbbgc7"}}
+{"time":"2026-06-01T20:06:24.787605591+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2026-06-01T20:06:24.788184326+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-06-02T03:13:33.318447737+08:00","level":"INFO","msg":"stream: closing","id":"srqbbgc7"}
+{"time":"2026-06-02T03:13:33.318488246+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-06-02T03:13:33.319827898+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-06-02T03:13:38.320411784+08:00","level":"ERROR","msg":"monitor: gpu: timeout waiting for process to exit"}
+{"time":"2026-06-02T03:13:39.40134236+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-06-02T03:13:40.333529109+08:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"srqbbgc7"}}
+{"time":"2026-06-02T03:13:40.333589967+08:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"srqbbgc7"}}
+{"time":"2026-06-02T03:13:40.333585759+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"srqbbgc7"}}
+{"time":"2026-06-02T03:13:40.333664069+08:00","level":"INFO","msg":"stream: closed","id":"srqbbgc7"}
