@@ -52,7 +52,7 @@ def check_sft_model(args):
     prompt_iter = prompts if input_mode == 0 else iter(lambda: input('💬: '), '')
     
     # 准备日志文件
-    log_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../outputs')
+    log_dir = os.path.join(PROJECT_ROOT, 'self_test/outputs')
     os.makedirs(log_dir, exist_ok=True)
     log_file_path = os.path.join(log_dir, 'check_full_sft.log')
     
