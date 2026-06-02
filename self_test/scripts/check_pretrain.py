@@ -30,8 +30,7 @@ def check_pretrain_model(args):
         print(f"Loading weights from {args.model_path}...")
         model.load_state_dict(torch.load(args.model_path, map_location=device), strict=True)
     else:
-        print(f"⚠️ 警告: 未找到模型文件 {args.model_path}")
-        print("⚠️ 继续使用随机初始化的权重，以测试脚本运行逻辑。\n")
+        raise FileNotFoundError(f"找不到模型文件: {args.model_path}。请检查路径或确保模型已训练完成。")
     
     model = model.half().eval().to(device)
     get_model_params(model, model.config)
@@ -132,7 +131,7 @@ def check_pretrain_model(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Check Pretrained MoE Model")
     parser.add_argument('--tokenizer_path', default=os.path.join(PROJECT_ROOT, 'model'), type=str, help="Tokenizer path")
-    parser.add_argument('--model_path', default=os.path.join(PROJECT_ROOT, 'trainer/out/pretrain_768_moe.pth'), type=str, help="Model checkpoint path")
+    parser.add_argument('--model_path', default=os.path.join(PROJECT_ROOT, 'out/pretrain_768_moe.pth'), type=str, help="Model checkpoint path")
     parser.add_argument('--hidden_size', default=768, type=int)
     parser.add_argument('--num_hidden_layers', default=8, type=int)
     parser.add_argument('--max_new_tokens', default=512, type=int)
