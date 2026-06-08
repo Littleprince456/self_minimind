@@ -1,0 +1,1 @@
+{"critic_lr":5e-08,"critic_loss":0.007077796617522836,"kl_ref":0.32199926674366,"avg_response_len":191.5,"reward":-0.2646484375,"_step":9750,"approx_kl":0.001564202437066342,"_wandb":{"runtime":57028},"_timestamp":1.7804490090458136e+09,"actor_lr":3e-08,"clipfrac":0.016971278935670853,"_runtime":57020.746242938}

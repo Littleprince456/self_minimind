@@ -1,0 +1,20 @@
+{"time":"2026-06-02T17:19:48.301624182+08:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2026-06-02T17:19:48.301641867+08:00","level":"INFO","msg":"created symlink","path":"/workspace/self_minimind/trainer/wandb/run-20260602_171948-to1i2f84/logs/debug-core.log"}
+{"time":"2026-06-02T17:19:48.302004125+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2026-06-02T17:19:48.309037831+08:00","level":"INFO","msg":"created new stream","id":"to1i2f84"}
+{"time":"2026-06-02T17:19:48.309076761+08:00","level":"INFO","msg":"stream: started","id":"to1i2f84"}
+{"time":"2026-06-02T17:19:48.309086245+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"to1i2f84"}}
+{"time":"2026-06-02T17:19:48.309100763+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"to1i2f84"}}
+{"time":"2026-06-02T17:19:48.309094737+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"to1i2f84"}}
+{"time":"2026-06-02T17:19:49.29988592+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2026-06-02T17:19:49.300452992+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-06-02T18:17:24.495177355+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/3134543919-nanjing-university/MiniMind-PPO/to1i2f84/file_stream\": unexpected EOF"}
+{"time":"2026-06-03T09:10:16.760609406+08:00","level":"INFO","msg":"stream: closing","id":"to1i2f84"}
+{"time":"2026-06-03T09:10:16.760665038+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-06-03T09:10:16.761924647+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-06-03T09:10:21.761967449+08:00","level":"ERROR","msg":"monitor: gpu: timeout waiting for process to exit"}
+{"time":"2026-06-03T09:10:23.430685845+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-06-03T09:10:24.419097525+08:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"to1i2f84"}}
+{"time":"2026-06-03T09:10:24.419149438+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"to1i2f84"}}
+{"time":"2026-06-03T09:10:24.419164386+08:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"to1i2f84"}}
+{"time":"2026-06-03T09:10:24.41920687+08:00","level":"INFO","msg":"stream: closed","id":"to1i2f84"}
